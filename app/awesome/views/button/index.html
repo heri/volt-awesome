@@ -1,0 +1,13 @@
+<:Body>
+  <div class="btn-group">
+    <:nav href="{{ attrs.href }}">
+      <button type="button" class="btn text-uppercase {{ if attrs.highlight }} highlight {{ end }}">
+        <i class="fa fa-{{attrs.icon}} fa-2x"></i>  {{ attrs.label }} {{ if attrs.value.present? }} <span class="badge">{{ attrs.value }}</span>{{ end }}
+      </button>
+      </:nav>
+  </div>
+
+<:Nav>
+  <li class="{{ if active_tab? }}active{{ end }}">
+    <a href="{{ attrs.href }}">{{ yield }}</a>
+  </li>

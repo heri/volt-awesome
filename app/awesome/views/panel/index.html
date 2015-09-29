@@ -1,0 +1,11 @@
+<:Body>
+  <div class="row">
+    <div class="panel">
+      {{ if attrs.title }}
+        <div class="panel-heading text-center">
+          <h5 class="text-uppercase"><strong>{{ attrs.title }}</strong><br><small>{{ attrs.subtitle }}</small></h4>
+        </div>
+      {{ end }}
+      {{ yield }}
+    </div>
+  </div>

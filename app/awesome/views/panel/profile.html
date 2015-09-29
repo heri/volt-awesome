@@ -1,0 +1,20 @@
+<:Body>
+<div class="panel">
+  <div class="panel-body profile">
+     <div class="media">
+       {{ if attrs.href }}
+          <a class="pull-left" href="{{ attrs.href }}">
+            <img class="media-object img-circle" src="{{ attrs.image_url }}" alt="{{ attrs.name }}">
+          </a>
+        {{ else }}
+          <span class="pull-left">
+            <img class="media-object img-circle" src="{{ attrs.image_url }}" alt="{{ attrs.name }}">
+          </span>
+        {{ end }}
+        <div class="media-body">
+           {{ if attrs.name }}<h2 class="media-heading">{{ attrs.name }}</h2>{{ end }}
+           {{ yield }}
+        </div>
+     </div>
+  </div>
+</div>

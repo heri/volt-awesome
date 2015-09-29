@@ -1,0 +1,16 @@
+<:Body>
+  <div class="row weather">
+    <div class="col-xs-12">
+      <div id="weather-widget" class="panel">
+        <div class="panel-heading text-center">
+            <div id="current"></div>
+            {{ attrs.city }}
+        </div>
+        <div class="panel-footer" id="tagline">
+          <div class="text-center">
+            {{ yield }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
