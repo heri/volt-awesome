@@ -25,7 +25,60 @@ Or install it yourself as:
 
 ## Usage
 
-It is possible to nest the UI blocks. For example, we can have a text panel, an image panel and nav footer inside a panel:
+### User card
+```
+<:awesome:panel>
+  <:awesome:panel:image href="{{ '/people/' + id }}" image_url="{{ lion_king.png }}" />
+
+  <:awesome:panel:profile name={{John Smith}} image_url="heri.png">Lorem ipsum dolor sit amet, consectetur adipiscing elit</:awesome:panel:profile>
+
+  <:awesome:panel:navfooter>
+    <:awesome:link icon="eye" href="{{ '/people/' + id }}" title="172"/>
+    <:awesome:link icon="comment" href="{{ '/people/' + id }}" title="34"/>
+    <:awesome:link icon="heart-o" href="{{ like(id) }}" title="210"/>
+  </:awesome:panel:navfooter>
+
+</:awesome:panel>
+```
+![screenshot 1](https://github.com/heri/volt-awesome/blob/master/screenshot1.png?raw=true =250x)
+
+### Forms
+```
+<:awesome:panel title="LOGIN TO YOUR ACCOUNT">
+  <h3>Email</h3>
+  <:awesome:field placeholder="{{ email }}" icon="user"/>
+  <h3>Password</h3>
+  <:awesome:field placeholder="{{ password }}" icon="lock"/>
+
+  ...(TODO)
+
+</:awesome:panel>
+```
+![screenshot 2](https://github.com/heri/volt-awesome/blob/master/screenshot2.png?raw=true =250x)
+
+### Dashboard
+```
+<:awesome:panel title="DATA TRANSFER">
+  <:awesome:panel:image image_url="{{ graph_image_url }}" />
+
+  <:awesome:panel:info>
+    <:awesome:panel:infoicon title="video" number="62%" />
+    <:awesome:panel:infoicon title="photo" number="21%" />
+    <:awesome:panel:infoicon title="audio" number="10%" />
+  </:awesome:panel:info>
+
+
+  <:awesome:panel:navfooter>
+    <:awesome:link icon="cloud-upload" href="{{ '/projects/' + id }}" title="Upload files"/>
+    <:awesome:link icon="share-alt" href="{{ '/pledges/' + id }}" title="share link"/>
+    <:awesome:link icon="history" href="{{ '/pledges/' + id }}" title="back up"/>
+  </:awesome:panel:navfooter>
+
+</:awesome:panel>
+```
+![screenshot 3](https://github.com/heri/volt-awesome/blob/master/screenshot3.png?raw=true =250x)
+
+### Real-life Volt app
 ```
 <:awesome:panel>
   <:awesome:panel:image href="{{ '/projects/' + id }}" image_url="{{ picture }}" />
@@ -46,9 +99,7 @@ We get:
 
 ## TODO
 
-* better "neutral" example
 * graphs (pie chart, line chart, bar chart)
-* re-do login UI for volt apps
 
 
 ## Contributing
