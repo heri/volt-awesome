@@ -4,7 +4,9 @@ Awesome UI for @VoltFramework applications, based on Bootstrap 3.3.0 and Font Aw
 
 Blocks of ui can be created with a few simple lines, such as `<:awesome:panel:image title="My headline" image_url="src.png" />`
 
-This component is still in alpha but has been used successfully in deployed apps. Example from an app done at a hackathon:
+These blocks are composable and each has its own css/jss
+
+Warning: This component is still in alpha but has been used successfully in deployed apps. Example from an app done at a hackathon:
 
 ![screenshot volt awesome ui](https://github.com/heri/volt-awesome/blob/master/screenshot.png?raw=true =250x)
 
